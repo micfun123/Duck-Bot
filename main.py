@@ -67,7 +67,7 @@ async def setchannel(ctx, channel: discord.TextChannel):
 
 @client.slash_command()
 @commands.has_permissions(administrator=True)
-async def setspeakchannel(ctx, channel: discord.TextChannel):
+async def quackchannel(ctx, channel: discord.TextChannel):
     filename = "servers.json"
     with open(filename, "r") as f:
         data = json.load(f)
