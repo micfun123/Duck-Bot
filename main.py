@@ -49,7 +49,9 @@ async def on_guild_remove(guild):
     with open(filename, "w") as f:
         json.dump(data, f, indent=4)
 
+
 @client.command()
+@commands.has_permissions(administrator=True)
 async def setchannel(ctx, channel: discord.TextChannel):
     filename = "servers.json"
     with open(filename, "r") as f:
@@ -63,6 +65,20 @@ async def setchannel(ctx, channel: discord.TextChannel):
         await ctx.send(f"Set channel to {channel.mention}")
         return
 
+@client.slash_command()
+@commands.has_permissions(administrator=True)
+async def setspeakchannel(ctx, channel: discord.TextChannel):
+    filename = "servers.json"
+    with open(filename, "r") as f:
+        data = json.load(f)
+    for i in range(len(data)):
+        if data[i]["guild_id"] == ctx.guild.id:
+            data[i]["channel"] = channel.id
+            break
+    with open(filename, "w") as f:
+        json.dump(data, f, indent=4)
+        await ctx.respond(f"Set channel to {channel.mention}")
+        return
 
 
 @client.event
