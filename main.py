@@ -92,8 +92,17 @@ async def on_message(message):
                     return
             else:
                     
-                    messageamount = random.randint(1, 5)
-                    duck = "quack " * messageamount
+                messageamount = random.randint(1, 5)
+                duck = ""
+                for i in range(messageamount):
+                    if(random.randint(1, 15) == 1):
+                        duck += "Quack "
+                    else:
+                        duck += "quack "
+
+                nope = random.randint(1,25)
+                if nope == 24:
+                    duck ="Moo"
                     await message.channel.send(duck)
         else:
             await client.process_commands(message)
