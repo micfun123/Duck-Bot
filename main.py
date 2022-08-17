@@ -1,3 +1,4 @@
+from email import message
 from http import client
 from itertools import chain
 import discord
@@ -17,7 +18,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-client = commands.Bot(command_prefix="^", case_insensitive=True, intents=discord.Intents.all())
+client = commands.Bot(command_prefix="^", case_insensitive=True)
 
 @client.event
 async def on_ready():
@@ -86,12 +87,12 @@ async def on_message(message):
     filename = "servers.json"
     with open(filename, "r") as f:
         data = json.load(f)
+
     for i in range(len(data)):
         if message.channel.id == data[i]["channel"]:
             if message.author.bot:
                     return
             else:
-                    
                 messageamount = random.randint(1, 5)
                 duck = ""
                 for i in range(messageamount):
@@ -103,7 +104,7 @@ async def on_message(message):
                 nope = random.randint(1,25)
                 if nope == 24:
                     duck ="Moo"
-                    await message.channel.send(duck)
+                await message.channel.send(duck)
         else:
             await client.process_commands(message)
 

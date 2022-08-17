@@ -1,14 +1,38 @@
 [
     {
+        "guild_id": 763348615233667082,
+        "channel": null
+    },
+    {
+        "guild_id": 856677753108693002,
+        "channel": null
+    },
+    {
         "guild_id": 898557704858136617,
-        "channel": 1003924493284151347
+        "channel": null
     },
     {
         "guild_id": 908963077125459989,
-        "channel": 1004669662556082256
+        "channel": null
     },
     {
-        "guild_id": 763348615233667082,
+        "guild_id": 915760402195959861,
+        "channel": null
+    },
+    {
+        "guild_id": 959104657089781770,
+        "channel": null
+    },
+    {
+        "guild_id": 985655459576959078,
+        "channel": null
+    },
+    {
+        "guild_id": 999915289749753916,
+        "channel": null
+    },
+    {
+        "guild_id": 1007028214016778341,
         "channel": null
     }
 ]
