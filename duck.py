@@ -104,6 +104,19 @@ async def on_message(message):
                 nope = random.randint(1,25)
                 if nope == 24:
                     duck ="Moo"
+                others = random.randint(1,60)
+                if others == 60:
+                    duck ="""
+                                 _
+                             .__(.)< (MEOW)
+                              \___)   
+                       ~~~~~~~~~~~~~~~~~~
+                    """
+                if others == 49:
+                    duck = "404: quacks not found"
+                rick = random.randint(1,250)
+                if rick == 249:
+                    duck = "https://imgur.com/NQinKJB"
                 await message.channel.send(duck)
         else:
             await client.process_commands(message)
