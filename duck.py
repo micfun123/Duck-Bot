@@ -106,12 +106,12 @@ async def on_message(message):
                     duck ="Moo"
                 others = random.randint(1,60)
                 if others == 60:
-                    duck ="""
+                    duck ="""```
                                  _
                              .__(.)< (MEOW)
                               \___)   
                        ~~~~~~~~~~~~~~~~~~
-                    """
+                    ```"""
                 if others == 49:
                     duck = "404: quacks not found"
                 rick = random.randint(1,250)
