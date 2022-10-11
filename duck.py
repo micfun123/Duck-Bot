@@ -104,6 +104,8 @@ async def on_message(message):
                 nope = random.randint(1,25)
                 if nope == 24:
                     duck ="Moo"
+                if nope == 25:
+                    duck ="Boo"
                 others = random.randint(1,60)
                 if others == 60:
                     duck ="""```
