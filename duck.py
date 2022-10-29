@@ -17,6 +17,13 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+#
+#
+#                  _      _      _
+#               __(.)< __(.)> __(.)=
+#               \___)  \___)  \___) 
+#
+#
 
 client = commands.Bot(command_prefix="^", case_insensitive=True)
 
