@@ -1,14 +1,8 @@
-from email import message
-from http import client
-from itertools import chain
 import discord
 from discord.ext import commands
-import asyncio
 import json
 import random
 import os
-from os import listdir
-from os.path import isfile, join
 
 import discord
 from discord.ext import commands, tasks
